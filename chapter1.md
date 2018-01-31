@@ -5,7 +5,7 @@ attachments :
   slides_link : 
 
 ---
-## Onboarding | Tables
+## Introduction to SAS
 
 ```yaml
 type: MultipleChoiceExercise
@@ -15,14 +15,19 @@ skills: 1
 key: bd86b99f37
 ```
 
-If you've used DataCamp to learn [R](https://www.datacamp.com/courses/free-introduction-to-r) or [Python](https://www.datacamp.com/courses/intro-to-python-for-data-science), you'll be familiar with the interface. For SQL, however, there are a few new features you should be aware of.
+Welcome to the course! Here are some interesting facts about SAS:
 
-For this course, you'll be using a database containing information on almost 5000 films. To the right, underneath the editor, you can see the data in this database by clicking through the tabs.
-
-From looking at the tabs, who is the first person listed in the `people` table?
+* Developed in the early 1970s at North Carolina State
+University
+* Originally intended for management and analysis of
+agricultural field experiments
+* Now the most widely used statistical software
+* Used to stand for “Statistical Analysis System”, now it is not
+an acronym for anything
+* Pronounced “sass”, not spelled out as three letters.
 
 `@pre_exercise_code`
-```{python}
+```{sql}
 # The pre exercise code runs code to initialize the user's workspace.
 # You can use it to load packages, initialize datasets and draw a plot in the viewer
 
@@ -30,25 +35,25 @@ connect('postgresql', 'films')
 ```
 
 `@instructions`
-- Kanye West
-- Biggie Smalls
-- 50 Cent
-- Jay Z
+- Statistical Analysis Software
+- Statistical Analysis System
+- Special Air Service
+- Shopping Analysis System
 
 `@hint`
-Look at the `people` tab under the editor!
+It's not the *Special Air Service*!
 
 `@sct`
 ```{python}
 # SCT written with sqlwhat: https://github.com/datacamp/sqlwhat/wiki
-msg_bad = 'Nope, look at the `people` table!'
-msg_success = 'Correct!'
+msg_bad = 'Nope, you are off track!'
+msg_success = 'Correct, you are smashing it!'
 
-Ex().test_mc(3,[msg_bad, msg_bad, msg_success, msg_bad])
+Ex().test_mc(2,[msg_bad, msg_bad, msg_success, msg_bad])
 ```
 
 ---
-## Onboarding | Errors
+## SAS Products
 
 ```yaml
 type: NormalExercise
@@ -57,6 +62,17 @@ xp: 100
 skills: 1
 key: 93f3637144
 ```
+
+SAS consists of a number of products including:
+
+- Base SAS - data management and basic procedures
+- SAS/STAT - statistical analysis
+- SAS/GRAPH - presentation quality graphics
+- SAS/OR - Operations research
+- SAS/ETS - Econometrics and Time Series Analysis
+- SAS/IML - interactive matrix language
+
+Let's start by taking a look at Proc SQL.
 
 If you submit the code to the right, you'll see that you get two types of errors.
 
