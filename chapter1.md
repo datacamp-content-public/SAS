@@ -8,7 +8,7 @@ attachments :
 ## Introduction to SAS
 
 ```yaml
-type: MultipleChoiceExercise
+type: PureMultipleChoiceExercise
 lang: sql
 xp: 50
 skills: 1
